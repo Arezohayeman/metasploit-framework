@@ -8,7 +8,7 @@ group :coverage do
   # code coverage for tests
   # any version newer than 0.5.4 gives an Encoding error when trying to read the source files.
   # see: https://github.com/colszowka/simplecov/issues/127 (hopefully fixed in 0.8.0)
-  gem 'simplecov'
+  gem 'simplecov', '>= 0.14.1'
 end
 
 group :development do
