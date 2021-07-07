@@ -19,9 +19,9 @@ group :development do
   # for development and testing purposes
   gem 'pry'
   # module documentation
-  gem 'octokit', '~> 4.0'
+  gem 'octokit', '~> 4.6', '>= 4.6.2'
   # session aggregator, native builds have issues on arm platforms for now
-  gem 'metasploit-aggregator' if [
+  gem 'metasploit-aggregator' if [, '>= 0.1.3'
     'x86-mingw32', 'x64-mingw32',
     'x86_64-linux', 'x86-linux',
     'darwin'].include?(RUBY_PLATFORM.gsub(/.*darwin.*/, 'darwin'))
@@ -43,7 +43,7 @@ group :test do
   # cucumber extension for testing command line applications, like msfconsole
   gem 'aruba'
   # cucumber + automatic database cleaning with database_cleaner
-  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails', '>= 1.4.5', :require => false
   gem 'shoulda-matchers'
   # Manipulate Time.now in specs
   gem 'timecop'
